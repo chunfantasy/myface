@@ -18039,6 +18039,7 @@ class MyCamera extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             this.formData.append('imageId', __WEBPACK_IMPORTED_MODULE_2_uuid_v1___default()());
             fetch('https://api.face.chun.no/identify', {
                 method: 'POST',
+                mode: 'cors',
                 body: this.formData
             }).then(response => {
                 response.text().then(text => {
