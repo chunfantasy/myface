@@ -18037,7 +18037,7 @@ class MyCamera extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             this.formData = new FormData(event.target);
             this.formData.append('imageURI', imageURI);
             this.formData.append('imageId', __WEBPACK_IMPORTED_MODULE_2_uuid_v1___default()());
-            fetch('http://face.chun.no:8000/identify', {
+            fetch('https://api.face.chun.no/identify', {
                 method: 'POST',
                 body: this.formData
             }).then(response => {
