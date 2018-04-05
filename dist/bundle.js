@@ -17865,12 +17865,8 @@ module.exports = getIteratorFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HeaderContainer__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MenuContainer__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MainContainer__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InfoContainer__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__FooterContainer__ = __webpack_require__(210);
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MainContainer__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__FooterContainer__ = __webpack_require__(210);
 
 
 
@@ -17880,10 +17876,8 @@ const HomeContainer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.create
     'div',
     null,
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__HeaderContainer__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__MenuContainer__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__MainContainer__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__InfoContainer__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__FooterContainer__["a" /* default */], null)
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__MainContainer__["a" /* default */], null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__FooterContainer__["a" /* default */], null)
 );
 
 /* harmony default export */ __webpack_exports__["a"] = (HomeContainer);
@@ -17903,7 +17897,7 @@ const HomeContainer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.create
 const Copyright = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'h5',
     { className: 'common-container' },
-    'Copyright \xA9 2018, Chun Fan \u8303\u6625, All Rights Reserved '
+    'Copyright \xA9 2018, All Rights Reserved '
 );
 
 /* harmony default export */ __webpack_exports__["a"] = (Copyright);
@@ -17946,20 +17940,10 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* NavItem */],
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '../resources/images/chun_logo.png', alt: 'TechChun', width: '50px' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'h1',
-            null,
-            'TechChun'
-        )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* NavItem */],
-        { eventKey: 2, className: 'pull-right', title: 'Item' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h4',
-            null,
-            'Blog'
+            { classNmae: 'pull-right' },
+            'AI Face'
         )
     )
 );
@@ -17967,42 +17951,7 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
 /* harmony default export */ __webpack_exports__["a"] = (Header);
 
 /***/ }),
-/* 208 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources_css_style_css__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources_css_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__resources_css_style_css__);
-
-
-
-
-const Menu = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Nav */],
-    { bsStyle: 'pills', className: 'common-container', activeKey: 1 },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* NavItem */],
-        null,
-        'NavItem 1 content'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* NavItem */],
-        { eventKey: 2, className: 'pull-right', title: 'Item' },
-        'NavItem 2 content'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* NavItem */],
-        { eventKey: 3, disabled: true },
-        'NavItem 3 content'
-    )
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (Menu);
-
-/***/ }),
+/* 208 */,
 /* 209 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18023,11 +17972,13 @@ class MyCamera extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     constructor() {
         super();
         this.handleFace = this.handleFace.bind(this);
-        this.state = { resultName: 'Guess' };
+        this.state = {
+            resultName: ''
+        };
     }
 
     componentDidMount() {
-        __WEBPACK_IMPORTED_MODULE_1_webcamjs___default.a.attach('#my_camera');
+        __WEBPACK_IMPORTED_MODULE_1_webcamjs___default.a.attach('#my-camera');
     }
 
     handleFace() {
@@ -18056,7 +18007,7 @@ class MyCamera extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'my_camera' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'my-camera' }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 {
@@ -18078,8 +18029,7 @@ class MyCamera extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                null,
-                'You are ',
+                { id: 'my-name' },
                 this.state.resultName
             )
         );
@@ -18133,27 +18083,7 @@ const HeaderContainer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.crea
 /* harmony default export */ __webpack_exports__["a"] = (HeaderContainer);
 
 /***/ }),
-/* 212 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-
-const InfoContainer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    { className: "shopping-list" },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "h1",
-        null,
-        "Shopping List for"
-    )
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (InfoContainer);
-
-/***/ }),
+/* 212 */,
 /* 213 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18173,28 +18103,7 @@ const MainContainer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.create
 /* harmony default export */ __webpack_exports__["a"] = (MainContainer);
 
 /***/ }),
-/* 214 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Menu__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources_css_style_css__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources_css_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__resources_css_style_css__);
-
-
-
-
-const MenuContainer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { className: 'common-container' },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Menu__["a" /* default */], null)
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (MenuContainer);
-
-/***/ }),
+/* 214 */,
 /* 215 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19214,7 +19123,7 @@ exports = module.exports = __webpack_require__(264)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"Helvetica\";\n  src: url(" + __webpack_require__(295) + ");\n}\nbody {\n  font-family: \"Helvetica\", Arial, sans-serif;\n}\n.common-container {\n  max-width: 1024px;\n  margin: auto;\n}\n.header-container {\n  background-color: black;\n  /* height: 100px; */\n}\n.header-container {\n  background-color: black;\n  /* height: 100px; */\n}\n#my_camera {\n  width: 320px;\n  height: 240px;\n  margin: auto;\n}\n.copyright {\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"Helvetica\";\n  src: url(" + __webpack_require__(295) + ");\n}\nbody {\n  font-family: \"Helvetica\", Arial, sans-serif;\n}\n.common-container {\n  max-width: 1024px;\n  margin: auto;\n}\n.header-container {\n  background-color: black;\n  /* height: 100px; */\n}\n.header-container {\n  background-color: black;\n  /* height: 100px; */\n}\n#my-camera {\n  width: 960px;\n  height: 600px;\n  margin: auto;\n}\n#my-name {\n  width: 960px;\n  height: 200px;\n  font-size: 2em;\n  text-align: center;\n  margin: auto;\n}\n.copyright {\n  text-align: center;\n}\n", ""]);
 
 // exports
 
